@@ -1,0 +1,196 @@
+/* 기본 컬러에셋 배정 */
+:root {
+  --c-white: #ffffff;
+  --c-black: #000000;
+  --c-asset1: #2196f3;
+  --c-asset2: #333333;
+  --c-asset3: #f0f0f0;
+  --c-asset4: #d9d9d9;
+}
+
+/* 모든 마진을 제거 및 여백등으로 크기가 변경되는 것을 막음 */
+* {
+  margin: 0;
+  box-sizing:border-box;
+}
+/* 페이지 전체 */
+#container {
+  /* 기본 길이를 1024px에 맞춤 */
+  width: 1024px;
+  height: auto;
+
+  font-family : 'Inter';
+
+  display:flex;
+  flex-direction: column;
+}
+/* 페이지 상단 */
+/* 제목 */
+header > div {
+  /* 기본 크기 및 폰트 설정 */
+  width: 100%;
+  height: 100px;
+  font-size: 12px;
+  font-weight: 900;
+  
+  /* 기본 글자색 및 배경색을 지정 */
+  color: var(--c-white);
+  background-color: var(--c-asset1);
+
+  /* 속성을 flex으로 하여 메인축을 center로 설정*/
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+
+  padding-bottom: 15px;
+}
+/* 모바일 화면에 요구된 벡터이미지를 생성. 타블렛에선 보이지 않게 숨김 */
+header > div > svg {
+  display:none;
+  visibility: hidden;
+}
+/* 목록 */
+header > nav {
+  /* 기본 크기 및 폰트 설정 */
+  width: 100%;
+  height: 200px;
+  font-size: 12px;
+  font-weight: 400;
+/* 기본 글자색 및 배경색을 지정 */
+  color: var(--c-black);
+  background-color: var(--c-asset3);
+  /* 속성을 flex, 방향을 column,메인축엔 컨텐츠 사이에 일정한 간격을 넣는걸 설정*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 40px 60px;
+}
+
+/* 페이지 중단 */
+/* 첫번째 블록 */
+main > div:nth-child(1) {
+  /* 이후 벡터 이미지와 다음 글의 위치를 요구된 사항에 맞추기 위해 길이를 fit-content으로 설정(부모 컨테이너의 크기를 키우지 않기 위해) */
+  width:fit-content;
+  height: 864px;
+  /* 요구에 맞게 패딩을 설정 */
+  padding-top: 86px;
+  padding-left: 60px;
+  /* flex 설정. 지정된 박스 왼쪽 상단에서 시작 */
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+/* 블록1 aritlcle */
+main > div:nth-child(1) > article {
+  /* 지정된 폰트 설정을 사용하게 함. 색상은 class으로 따로 적용 */
+  font-size: 96px;
+  font-weight: 700;
+  line-height:80%;
+
+}
+main > div:nth-child(1) > div  {
+  /*벡터 이미지와 다음 글의 위치를 요구된 사항에 맞추기 위해 길이를 fit-content으로 설정(부모 컨테이너의 크기를 키우지 않기 위해) */
+  width:fit-content;
+  display:flex;
+  flex-direction: column;
+
+  align-items: center;
+  /* 요구사항대로 여백을 맞춤 */
+  margin-top: 86px;
+
+}
+main > div:nth-child(1) > div > div {
+  font-size: 12px;
+  /* 위의 벡터 이미지와의 간격을 띄움 */
+  margin-top: 30px;
+}
+
+/* 두번쨰 블록 */
+main > div:nth-child(2) {
+  /* Flex를 사용하기 위해서 높이를 강제 지정 */
+  width: 100%;
+  height: 1368px;
+  /* 요구된 폰트설정을 사용 */
+  font-family:'Karantina';
+  font-size: 128px;
+  background-color: var(--c-asset1);
+  /* 좌우 패딩값을 주어 요구된대로 헤드라인 및 컨텐츠의 여백을 맞춤 */
+  padding-left: 60px;
+  padding-right: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;;
+  
+}
+/* 글박스와 벡터이미지를 한 줄에 넣기위해 flex, 방향은 row, 교차축 정렬은 center 사용됨. */
+main > div:nth-child(2) > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* 헤드라인의 크기, 스타일, 색상 설정 */
+main > div:nth-child(2) > hr {
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--c-white);
+  background-color: var(--c-white);
+}
+/* 벡터 이미지와 글박스의 간격을 맞추기 위해 여백 추가 */
+main > div:nth-child(2) > div > article {
+  margin-right: 22px;
+}
+
+/* 페이지 하단 */
+footer {
+  /* flex을 쓰기위해 높이 강제지정 */
+  width: 100%;
+  height: 200px;
+/* 가능한 요구사항대로 맞추기 위해 안쪽 여백을 구현 */
+  padding: 30px 66px;
+  /* 요구받은 색상 설정  */
+  background-color: var(--c-asset2);
+  color: var(--c-asset4);
+  /* 글자 크기 설정 */
+  font-size: 8px;
+  /* 컨텐츠가 바닥에 붙게 메인축이 하단에 붙게 설정. */
+  display: flex;
+  flex-direction : column;
+  justify-content: flex-end;
+
+}
+/* 헤드라인의 크기, 스타일, 색상 설정 */
+footer > hr {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--c-asset4);
+  background-color: var(--c-asset4);
+  margin-bottom: 10px;
+}
+/* 글박스안의 글들 간격 설정 */
+footer > div > div {
+  margin-bottom: 2px;
+}
+
+
+/* 클래스 목록, 글자 색상을 고유로 지정하기위해 사용 */
+
+.c-asset1 {
+  color: var(--c-asset1); 
+}
+.c-asset2 {
+  color: var(--c-asset2);
+}
+.c-asset3 {
+  color: var(--c-asset3);
+}
+.c-asset4 {
+  color: var(--c-asset4);
+}
+.c-white {
+  color: var(--c-white);
+}
+.c-black {
+  color: var(--c-black);
+}

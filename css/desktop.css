@@ -1,0 +1,56 @@
+@media screen and (min-width: 1728px) {
+  #container {
+    width: 1728px;
+  }
+
+  header > div {
+    /*자식 요소의 메인 축을 왼쪽으로 오게 한 후 교차축을 중심에 맞춤*/
+    justify-content: start;
+    align-items: center;
+    padding: 0;
+  }
+  /* 자식인 글박스의 오른쪽 바깥여백을 주어 글을 뜨게 함 */
+  header > div > div {
+    margin: 38px;
+  }
+/* grid를 사용하여 메인 두 블록을 가로형태 및 비율을 지정 */
+  main {
+    display: grid;
+    grid-template-columns: 25fr 75fr;
+  }
+  main > div:nth-child(1){
+    height: auto;
+    padding-top: 24px;
+    padding-left: 38px;
+  }
+  /* 블록2의 크기를 지정하여 전체블록의 크기를 고정 */
+  main > div:nth-child(2){
+    height: 857px;
+    /*안의 컨텐츠를 박스의 하단에 붙게 설정*/
+    justify-content: flex-end;
+    /*안쪽 여백을 강제로 지정하여 KOREA DIGITAL TRAINING의 위치를 조정*/
+    padding-bottom: 82px;
+    padding-left: 10%;
+    padding-right: 5%;
+  }
+  main > div:nth-child(2) > div {
+    /*KOREA DIGITAL TRAININ이 오른쪽에 붙게 조정*/
+    justify-content: flex-end;
+  }
+  main > div:nth-child(2) > div > article > div{
+    /*안쪽 컨텐츠, 글들의 폭맞춤을 오른쪽에 가게 함*/
+    text-align: end;
+    /*글간의 간격을 조절하기위해 사용*/
+    line-height: 95%;
+  }
+  main > div:nth-child(2) > div > div > svg {
+    display : none;
+    visibility: hidden;
+  }
+  /* 하단의 안쪽여백을 데스크탑에 맞게 맞춤. */
+  footer {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 50px;
+  }
+}

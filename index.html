@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KDT 웹프로그래밍 기본 정규평가</title>
+  <!-- 기본 외부스타일시트 타블렛에 맞춰져 있다. -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- 모바일용 -->
+  <link rel="stylesheet" href="./css/mobile.css">
+  <!-- 데스크탑용 -->
+  <link rel="stylesheet" href="./css/desktop.css">
+  <!-- 구글폰트 가져오기. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- inter(400, 700, 900), Karintia -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Karantina&display=swap" rel="stylesheet">
+</head>
+<!-- 원래 고유 태그들(h1, p 등)을 사용해서 작성하려 했으나 해당 고유 태그들의 경우 스스로 가지고 있는 기본 여백 및 글자크기가 있어 이를 일일이 다 수정하는건 시간이 걸렸기에 div로 통일함.-->
+<body>
+  <!-- 페이지 전체를 감싸는 컨테이너 -->
+  <div id="container">
+    <!-- 페이지 상단 -->
+    <header>
+      <!-- 최상단 부분, 제옥이 들어갈 박스 -->
+      <div>
+        <div>Fullstack Developer Training for Expert</div>
+        <!-- 벡터 이미지의 색상및 크기를 변경하기 위해선 HTML이 직접 구현하는 방법이외 찾지 못하였으므로 svg를 요구한 위치에 구현함 -->
+        <svg width="8" height="14" viewBox="0 0 35 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.21247 59.7945C0.404157 58.9908 0 58.0392 0 56.9398C0 55.8425 0.404157 54.892 1.21247 54.0883L24.8961 30.5402L1.13164 6.91173C0.377213 6.16162 0 5.22398 0 4.09881C0 2.97365 0.404157 2.00922 1.21247 1.20553C2.02079 0.401845 2.97783 0 4.0836 0C5.18722 0 6.14319 0.401845 6.9515 1.20553L34.1109 28.2899C34.4342 28.6113 34.6637 28.9596 34.7995 29.3347C34.9332 29.7097 35 30.1116 35 30.5402C35 30.9688 34.9332 31.3707 34.7995 31.7457C34.6637 32.1208 34.4342 32.469 34.1109 32.7905L6.87067 59.8748C6.11624 60.6249 5.18722 61 4.0836 61C2.97783 61 2.02079 60.5982 1.21247 59.7945Z" fill="white"/>
+          </svg>
+      </div>
+      <!-- 네비게이션, 링크들이 들어갈 박스 -->
+      <nav>
+        <div>Design Thinking</div>
+        <div>Web Programming</div>
+        <div>Git & Github</div>
+        <div>Developmnent Progress</div>
+        <div>Architecture</div>
+        <div>Cooperative work</div>
+      </nav>
+    </header>
+    <!-- 페이지 중단 -->
+    <main>
+      <!-- 흰색 배경, 메인 박스1 -->
+      <div>
+          <!-- flex로 위치를 구분하기위해 article과 div로 나눔 -->
+          <article>
+            <div>DON'T</div>
+            <div class="c-asset1">DWELL</div>
+            <div class="c-asset1">ON</div>
+            <div class="c-asset1">THE</div>
+            <div>PAST</div>
+          </article>
+          <div>
+            <!-- 벡터 이미지의 색상및 크기를 변경하기 위해선 HTML이 직접 구현하는 방법이외 찾지 못하였으므로 svg를 요구한 위치에 구현함 -->
+            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.27668 0.277136C0.461133 0.0923782 0.679526 -5.82256e-07 0.931858 -5.71227e-07C1.1837 -5.60218e-07 1.40184 0.0923782 1.5863 0.277136L6.99078 5.69053L12.4137 0.25866C12.5859 0.08622 12.8011 -5.24076e-08 13.0593 -4.11198e-08C13.3175 -2.9832e-08 13.5389 0.0923787 13.7233 0.277136C13.9078 0.461894 14 0.680647 14 0.933395C14 1.18565 13.9078 1.40416 13.7233 1.58891L7.50725 7.79677C7.43347 7.87067 7.35354 7.92314 7.26746 7.95418C7.18138 7.98473 7.08915 8 6.99078 8C6.8924 8 6.80018 7.98473 6.7141 7.95418C6.62802 7.92314 6.54809 7.87067 6.47431 7.79677L0.258235 1.57044C0.0860786 1.398 -5.18264e-08 1.18565 -4.08e-08 0.933394C-2.9752e-08 0.680646 0.092227 0.461893 0.27668 0.277136Z" fill="#2196F3"/>
+            </svg>
+            <div class="c-asset1">Experience training in field projects with the<br>
+            Green Computer Academny and digital companies</div>
+          </div>
+      </div>
+      <!-- 하늘색 배경, 메인 박스2,(링크 배너로 추정) -->
+      <div>
+        <div>
+          <article>
+            <div class="c-white">KOREA</div>
+            <div class="c-white">DIGITAL</div>
+            <div class="c-white">TRAINING</div>
+          </article>
+          <!-- article과 교차축을 맞춰야 하기에 article안에 넣지 않고 div로 감싸서 또하나의 div에 적용. -->
+          <div><svg width="35" height="61" viewBox="0 0 35 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.21247 59.7945C0.404157 58.9908 0 58.0392 0 56.9398C0 55.8425 0.404157 54.892 1.21247 54.0883L24.8961 30.5402L1.13164 6.91173C0.377213 6.16162 0 5.22398 0 4.09881C0 2.97365 0.404157 2.00922 1.21247 1.20553C2.02079 0.401845 2.97783 0 4.0836 0C5.18722 0 6.14319 0.401845 6.9515 1.20553L34.1109 28.2899C34.4342 28.6113 34.6637 28.9596 34.7995 29.3347C34.9332 29.7097 35 30.1116 35 30.5402C35 30.9688 34.9332 31.3707 34.7995 31.7457C34.6637 32.1208 34.4342 32.469 34.1109 32.7905L6.87067 59.8748C6.11624 60.6249 5.18722 61 4.0836 61C2.97783 61 2.02079 60.5982 1.21247 59.7945Z" fill="white"/>
+            </svg>
+            </div>
+        </div>
+        <hr>
+      </div>
+      
+    </main>
+    <!-- 페이지 하단 -->
+    <footer>
+      
+      <hr> <!-- 분리선 -->
+      <!-- 사이트 대표자 소개 -->
+      <div>
+        <div>대표자 : 피카츄</div>
+        <div>사업자등록번호 : 010-9139-0957</div>
+        <div>통신판매업신고 : 2023-02-17</div>
+        <div>주소 : 대전광역시 서구 오라클빌딩 3층 그린컴퓨터아트학원</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
